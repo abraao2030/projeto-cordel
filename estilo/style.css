@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passero+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passero One';
+    --fonte3:  'Sriracha';
+}
+
+* { /*Comfigurações globais*/
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh; /*Tera 100% da tela em branco*/
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black; /*Cor de fundo*/
+    color: white; /*Cor da letra*/
+    text-align: center;
+    
+}
+
+header > h1 {
+    padding-top: 50px; /*Margem interna acima*/
+    font-variant: small-caps; /*deixa as letras em maiscula*/
+    font-family: var(--fonte2);
+    font-size: 10vw; /*Tamanho da fonte do cabeçalho 10% da largura da tela*/
+}
+
+header > p {
+    padding-bottom: 50px; /*Margem interna abaixo*/
+}
+
+header a, footer a {
+    color: white; /*Sera branco*/
+    text-decoration: none; /*Não tera texto decorado*/
+    font-weight: bolder; /*Texto ficara em negrito*/
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline; /*quando passar o maouse por cima ficara */
+}
+
+section { /*Todas as seções*/
+    padding-top: 10vh; /*Tera uma altura de margem no topo interna de 10% da tela em branco */
+    padding-bottom: 10vh; 
+    line-height: 2em; /*Altura entre as linhas */
+    padding-left: 30px; /*Margem interna na esquerda*/
+    font-family: var(--fonte3);
+    font-size: 3.5vw; /*Tamanho da fonte para melhorar leitura tem 5% da tela em branco */
+}
+
+section > p {
+    padding-bottom: 2em; /*Distancia para um paragrafo*/
+}
+
+section.normal { /*Toda a classe de seção normal*/
+    background-color: white; /*Cor de fundo */
+    color:rgb(3, 3, 3); 
+}
+
+section.imagem { /*Toda a classe de seção imagem */
+    background-color: rgb(59, 59, 59);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.534); /*Sombra interna nas fotos */
+    background-attachment: fixed; /*Fixa a imagem no fundo da tela */
+}
+
+section.imagem > p { /*Toda a seção da classse imagem que tiver um paragrafo dentro */
+    display: inline-block;/*cria uma largura que aconpanha o texto*/
+    padding: 8px; /*Margem interna*/
+    background-color: rgba(34, 33, 33, 0.534); /*cor de fundo*/
+    text-shadow: 2px 2px 0px black; /*Sombras nas letras*/
+    
+}
+ 
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center; /*Posição da imagem direita centro*/
+    background-size: cover; /*Adapita a imagem na tela*/
+}
+
+section#img02 {
+    background-image: url(../imagens/background002.jpg);
+    background-size: cover; /*Adapita a imagem na tela */
+}
+
+footer {
+    background-color: black; /*cor de fundo*/
+    color: white; /*Cor da letra*/
+    text-align: center; /*Texto alinhado no centro*/
+    padding: 10px; /*Margem interna*/
+}
